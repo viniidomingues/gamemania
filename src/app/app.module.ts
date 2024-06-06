@@ -15,6 +15,7 @@ import { NotebooksComponent } from './views/notebooks/notebooks.component';
 import { CelularesComponent } from './views/celulares/celulares.component';
 import { AcessoriosComponent } from './views/acessorios/acessorios.component';
 import { ContatoComponent } from './views/contato/contato.component';
+import { ClockComponent } from './components/clock/clock.component';
 
 
 
@@ -32,7 +33,7 @@ import { ContatoComponent } from './views/contato/contato.component';
     CelularesComponent,
     AcessoriosComponent,
     ContatoComponent,
-
+    ClockComponent
 
   ],
   imports: [

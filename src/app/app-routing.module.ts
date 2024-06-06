@@ -8,6 +8,7 @@ import { JogosComponent } from './views/jogos/jogos.component';
 import { LoginComponent } from './views/login/login.component';
 import { NotebooksComponent } from './views/notebooks/notebooks.component';
 import { PcGamersComponent } from './views/pc-gamers/pc-gamers.component';
+import { AuthGuard } from './oauth.guard';
 
 
 
@@ -15,11 +16,11 @@ import { PcGamersComponent } from './views/pc-gamers/pc-gamers.component';
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "login", component:LoginComponent},
-  {path: "pc-gamers", component:PcGamersComponent},
-  {path: "jogos", component:JogosComponent},
-  {path: "notebooks", component:NotebooksComponent},
-  {path: "celulares", component: CelularesComponent},
-  {path: "acessorios", component: AcessoriosComponent},
+  {path: "pc-gamers", component:PcGamersComponent, canActivate: [AuthGuard]},
+  {path: "jogos", component:JogosComponent,canActivate: [AuthGuard]},
+  {path: "notebooks", component:NotebooksComponent,canActivate: [AuthGuard]},
+  {path: "celulares", component: CelularesComponent,canActivate: [AuthGuard]},
+  {path: "acessorios", component: AcessoriosComponent ,canActivate: [AuthGuard]},
   {path: "contato", component: ContatoComponent},
 ];
 

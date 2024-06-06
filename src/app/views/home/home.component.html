@@ -24,82 +24,13 @@
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
+        <div class="col" *ngFor="let destaque of destaques">
           <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 1">
+            <img [src]="destaque.imagem" class="card-img-top" [alt]="'Imagem ' + destaque.titulo">
             <div class="card-body">
-              <h5 class="card-title">Produto em Destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 2">
-            <div class="card-body">
-              <h5 class="card-title">Produto em Destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 3">
-            <div class="card-body">
-              <h5 class="card-title">Produto em destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 4">
-            <div class="card-body">
-              <h5 class="card-title">Produto em Destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 5">
-            <div class="card-body">
-              <h5 class="card-title">Produto em destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 6">
-            <div class="card-body">
-              <h5 class="card-title">Produto em Destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 7">
-            <div class="card-body">
-              <h5 class="card-title">Produto em Destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
-              <a href="#" class="btn btn-primary card-buy">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="assets/images/GameManiaCard.jpg" class="card-img-top" alt="Imagem Produto 8">
-            <div class="card-body">
-              <h5 class="card-title">Produto em Destaque</h5>
-              <p class="card-text">Descrição do Produto</p>
+              <h5 class="card-title">{{ destaque.titulo }}</h5>
+              <p class="card-text">{{ destaque.descricao }}</p>
+              <p class="card-text">Preço: {{ destaque.preco | currency:'BRL':'symbol-narrow':'1.2-2' }}</p>
               <a href="#" class="btn btn-primary card-buy">Comprar</a>
             </div>
           </div>

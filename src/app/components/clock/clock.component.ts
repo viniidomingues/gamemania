@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class ClockComponent {
-  @Input() horas: number;
-  @Input() minutos: number;
-  @Input() segundos: number;
+  @Input() horas!: number;
+  @Input() minutos!: number;
+  @Input() segundos!: number;
 }
