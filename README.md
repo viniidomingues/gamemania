@@ -1,7 +1,7 @@
 ## :video_game: GameMania em Angular :video_game:
 
 
-Projeto de **WebSite** para loja de eletrônicos do Universo Gamer desenvolvido como avaliação parcial do curso de **Desenvolvimento Full-Stack** pelo SENAI/EAD.
+Projeto de **WebSite** para loja de eletrônicos do Universo Gamer
 
 
 [Game Mania - Acesse aqui]():rocket:
